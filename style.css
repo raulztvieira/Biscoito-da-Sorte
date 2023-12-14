@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bc-body: linear-gradient(45deg, #190361 0%, #b0f 100%) no-repeat;
+  --color-base-white: #fff;
+  --tc-text: #34355b;
+  --tc-message: #000;
+  --bc-message: #e4edf1;
+  --bc-btn: #ff9500;
+  --ff-title: "Montserrat", sans-serif;
+  --ff-text: "DM Sans", sans-serif;
+  --ff-message: "Dancing Script", cursive;
+}
+
+body {
+  height: 100vh;
+  background: var(--bc-body);
+  background-size: 300% 300%;
+  font-size: 1.6rem;
+
+  display: grid;
+  place-items: center;
+
+  animation: gradient 5s ease alternate infinite;
+}
+
+.hide {
+  display: none !important;
+}
+
+main {
+  background: var(--color-base-white);
+  border-radius: 0.5rem;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.8);
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  width: min(42.8rem, 90%);
+
+  text-align: center;
+}
+
+/* Screen1 */
+
+h1 {
+  font-family: var(--ff-title);
+  font-size: 2.4rem;
+  color: var(--tc-text);
+
+  margin: 0 2rem 1.4rem;
+}
+
+.screen1 p {
+  font-family: var(--ff-text);
+  font-size: 1.5rem;
+  color: var(--tc-text);
+}
+
+#cookie {
+  margin-top: 2rem;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#cookie:hover {
+  animation: vibrateRotate 0.2s linear infinite both;
+}
+
+/* Screen 2 */
+
+.screen2 {
+  display: grid;
+  gap: 1.7rem;
+}
+
+h2 {
+  font-family: var(--ff-title);
+  font-size: 2.4rem;
+  color: var(--tc-text);
+  margin: 0 1rem;
+}
+
+.message {
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+  font-family: var(--ff-message);
+  font-size: 2.4rem;
+  color: var(--tc-message);
+  padding: 1rem;
+}
+
+.screen2 button {
+  width: 17.4rem;
+  height: 5.2rem;
+  background-color: var(--bc-btn);
+  border: none;
+  border-radius: 0.4rem;
+  color: var(--color-base-white);
+  font-size: 1.4rem;
+  font-family: var(--ff-text);
+  font-weight: bold;
+
+  padding: 1.6rem;
+  margin: 0 auto;
+
+  cursor: pointer;
+
+  transition: background 0.3s;
+}
+
+.screen2 button:hover {
+  background-color: #ffa82e;
+}
+
+/* Animation */
+
+@keyframes vibrateRotate {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px) rotate(-2deg);
+  }
+  40% {
+    transform: translate(-2px, -2px) rotate(0);
+  }
+  60% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+  80% {
+    transform: translate(2px, -2px) rotate(0);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+@keyframes gradient {
+  from {
+    background-position: 0 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}
